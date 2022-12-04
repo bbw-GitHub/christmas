@@ -1,0 +1,81 @@
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900');
+
+/* Color Palette */
+
+$color-background: #171E2B;
+$color-background-light: #39445B;
+
+$color-yellow: #FFDF9F;
+$color-green: #42CE8E;
+
+/* General Styles */
+
+body {
+	background: $color-background;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.sections {
+	padding: 40px 12vw;
+	@media (min-width: 960px) {
+  	padding: 40px calc( (100% - 600px)/2 );
+	}
+}
+
+.container {
+	width: 100%;
+}
+
+svg {
+	width: 100%;
+	max-height: 100vh;
+}
+
+#cat {
+	opacity: 0;
+	cursor: pointer;
+}
+
+.shadow-2, .shadow-1 {
+	opacity: 0;
+}
+
+/* Footer */
+
+footer {
+	@extend .sections;
+	background-color: $color-background-light;
+	color: white;
+}
+
+.footer__title {
+	font-weight: bold;
+	font-size: 30px;
+	margin-top: 40px;
+}
+
+.footer__subtitle {
+	font-size: 22px;
+	color: $color-yellow;
+}
+
+.footer__parragraph {
+	line-height: 1.5em;
+	font-size: 22px;
+	a {
+		color: $color-green;
+	}
+}
+
+.footer__list {
+	@extend .footer__parragraph;
+}
+
+.copyright {
+	@extend .footer__parragraph;
+	text-align: center;
+	border-top: 1px dashed rgba(white,.15);
+	padding: 10px 0;
+	margin: 40px auto;
+}
